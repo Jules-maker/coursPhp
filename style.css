@@ -1,0 +1,5 @@
+.departement {
+    max-width: 5em;
+    max-height: 6em;
+    overflow: auto;
+}

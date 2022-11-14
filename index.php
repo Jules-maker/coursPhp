@@ -7,7 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- make a link to exercie-1.php -->
+    <a href="exercie-1.php" style="font-size: 5em;">Exercice 1</a>
+    
+       
     <h1>Test</h1>
+
     <?php echo "Hello World" ;
     
     $name = "John";
@@ -64,7 +69,11 @@
             "age" => 12,
             "email" => "user2àgmail.com"
         ];
-
+        $user3 = [
+            "name" => "julie",
+            "age" => 100,
+            "email" => "julie@outlook.fr"
+        ];
         echo $user1["name"];
 
         while ($number <= 20) {
@@ -75,6 +84,15 @@
         for ($i=0; $i < 10; $i++) { 
             echo "<p>Je suis dans la boucle</p>";
         }
+//si la key n'est pas def alors on aurait 0:value 1:value 2:value
+        foreach ($user3 as $key => $value) {
+            echo "<p> $key : $value </p>";
+        }
+
+        //var dump permet d'afficher un tableau 
+        var_dump($user1);
+
+        //die() permet d'arrêter le script
         ?>
 </body>
 </html>
