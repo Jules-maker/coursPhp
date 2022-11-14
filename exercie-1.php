@@ -91,6 +91,66 @@ while ($departement <= 76999) {
 }
 echo "</div>";
 echo "<br/>";
+
+//exo 9
+
+for ($i = 1; $i <= 10; $i++) {
+    echo "5 x " . $i . " = " . $i * 5 . "<br/>";
+}
+
+echo "<br/>";
+
+//exo 10  
+
+for ($i = 1; $i <= 5; $i++) {
+
+    for ($j = 1; $j <= $i; $j++) {
+        echo $i;
+    }
+    echo "<br/>";
+}
+
+echo "<br/>";
+
+//exo 11
+
+$i = 0;
+while ($i <= 20) {
+    if ($i === 10) {
+        echo "<strong>" . $i . "</strong><br/>";
+    }
+    else{
+        echo $i . "<br/>";
+    }
+    $i += 2;
+
+    
+}
+
+//exo 12
+
+
+$country = ["France" => "Paris", "Allemagne" => "Berlin", "Italie" => "Rome"];
+foreach ($country as $key => $value) {
+    echo "La capitale de " . $key . " est " . $value . "<br/>";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     ?>
 </body>
 

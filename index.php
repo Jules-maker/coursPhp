@@ -9,6 +9,8 @@
 <body>
     <!-- make a link to exercie-1.php -->
     <a href="exercie-1.php" style="font-size: 5em;">Exercice 1</a>
+    <a href="exercie-2.php" style="font-size: 5em;">Exercice 2</a>
+    
     
        
     <h1>Test</h1>
