@@ -12,6 +12,7 @@
     <!-- make a link to exercie-1.php -->
     <a href="exercice-1.php" style="font-size: 5em;">Exercice 1</a>
     <a href="exercice-2.php" style="font-size: 5em;">Exercice 2</a>
+    <a href="exercice-3.php" style="font-size: 5em;">Exercice 3</a>
     
     
        
