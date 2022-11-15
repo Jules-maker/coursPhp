@@ -1,3 +1,5 @@
+<?php declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +17,9 @@
        
     <h1>Test</h1>
 
-    <?php echo "Hello World" ;
+    <?php
+     echo "Hello World" ;
+    
     
     $name = "John";
     $age = 20;
@@ -99,22 +103,53 @@
 
         //objets
 
-        class User {
+//         class User {
             
-            public function __construct( $name, $age, $email) {
-                $this->name = $name;
-                $this->age = $age;
-                $this->email = $email;
-            }
+//             public function __construct(public string $name,public int $age,public string $email) {
+                
+//             }
 
-            public function sayHello() {
-                echo "<p> Hello my name is $this->name </p>";
-            }
-            public function displayUser() {
-                echo "<p>" . $this->name . " " . $this->age . " ".$this->email ."</p>";
-            }
-        }
+//             public function sayHello()  {
+//                 echo "<p> Hello my name is $this->name </p>";
+//             }
+//             public function displayUser() {
+//                 echo "<p>" . $this->name . " " . $this->age . " ".$this->email ."</p>";
+//             }
+//         }
+// new User("jules",12,"j.g@g.com");
 
+//         // class Customer {
+//         //     /**
+//         //      * Firstname
+//         //      * Lastname
+//         //      * Email
+//         //      * Balance
+//         //      * Products
+//         //      */
+
+            
+//         // }
+
+// //make a class Customer with a constructor taking Firstname, Lastname, Email, Balance, Products
+// //make a method displayCustomer() that displays the customer's information
+//     class Customer {
+//         public function __construct(public string $firstname,public string $lastname,public string $email,public float $balance,public array $products) {
+            
+//         }
+//         public function displayCustomer() {
+//             echo "<p>" . $this->firstname . " " . $this->lastname . " ".$this->email . " " . $this->balance . " " . $this->products ."</p>";
+//         }
+//         public function addProduct($product) {
+//             array_push($this->products, $product);
+//         }
+//     }
+require_once "classes/User.php";
+require_once "classes/Customer.php";
+require_once "classes/Administrator.php";
+
+
+$customer = new Customer("jules","Giraud","j.g@g.com",100,["book1","book2"]);
+$admin = new Administrator("jules","Giraud","j.g@h.fr");
 
 
 
