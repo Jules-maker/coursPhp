@@ -143,18 +143,21 @@
 //             array_push($this->products, $product);
 //         }
 //     }
-require_once "classes/User.php";
+require_once "classes/AbstractUser.php";
 require_once "classes/Customer.php";
 require_once "classes/Administrator.php";
-require_once "classes/Book.php";
+require_once "classes/BookType.php";
 require_once "classes/BookInterface.php";
-
-$customer = new Customer("jules","Giraud","j.g@g.com",100,["book1","book2"]);
+require_once "classes/Book.php";
+// $customer = new Customer("jules","Giraud","j.g@g.com",100,["book1","book2"]);
 $admin = new Administrator("jules","Giraud","j.g@h.fr");
 
+$customer = new Customer("jules","Giraud","j@g.fr",100,["book1","book2","book3"]);
 
-
-
+foreach ($customer->getBooks() as $book) {
+    $type = $book->getType();
+    echo $type->value . " > " . $type->readFrom() . "<br>";
+}
 
 
         ?>

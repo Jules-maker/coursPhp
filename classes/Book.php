@@ -5,6 +5,7 @@ class Book implements BookInterface {
     public function __construct(
         public string $author,
         public int $pageCount,
+        public BookType $type,
         
     ) {
     }
@@ -36,6 +37,11 @@ class Book implements BookInterface {
     {
         echo "Je lis le livre";
     }
+public function getType(): BookType
+{
+    return $this->type;
+}
+
 }
 
 

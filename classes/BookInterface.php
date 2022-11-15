@@ -8,6 +8,7 @@ interface BookInterface
     
     public function read():void;
 
+    public function getType():BookType;
 }
 
 
