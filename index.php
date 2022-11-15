@@ -95,6 +95,32 @@
         var_dump($user1);
 
         //die() permet d'arrêter le script
+
+
+        //objets
+
+        class User {
+            
+            public function __construct( $name, $age, $email) {
+                $this->name = $name;
+                $this->age = $age;
+                $this->email = $email;
+            }
+
+            public function sayHello() {
+                echo "<p> Hello my name is $this->name </p>";
+            }
+            public function displayUser() {
+                echo "<p>" . $this->name . " " . $this->age . " ".$this->email ."</p>";
+            }
+        }
+
+
+
+
+
+
+
         ?>
 </body>
 </html>
