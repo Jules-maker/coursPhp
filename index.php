@@ -146,7 +146,8 @@
 require_once "classes/User.php";
 require_once "classes/Customer.php";
 require_once "classes/Administrator.php";
-
+require_once "classes/Book.php";
+require_once "classes/BookInterface.php";
 
 $customer = new Customer("jules","Giraud","j.g@g.com",100,["book1","book2"]);
 $admin = new Administrator("jules","Giraud","j.g@h.fr");
