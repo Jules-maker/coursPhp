@@ -27,6 +27,16 @@
         echo "<p>Nom: " . $this->name . " - Vie : " . $this->life;
         echo "<br>";
     }
+    public function getWeapon():string {
+        return $this->weapon;
+    }
+    public function setWeapon($weapon):void {
+        $this->weapon = $weapon;
+    }
+    public function attack($warrior):void {
+
+        $warrior->life -= 10;
+    }
 
 }
 
@@ -46,13 +56,20 @@ class Weapon {
 
 
 
-$warrior1 = new Warrior("John", 100);
-$warrior2 = new Warrior("George", 80);
-$warrior3 = new Warrior("Ringo", 100);
+$warrior1 = new Warrior("John", 100,"épée");
+$warrior2 = new Warrior("George", 80,"épée");
+$warrior3 = new Warrior("Ringo", 100,"épée");
 $warrior1->displayWarrior();
 $warrior2->displayWarrior();
 $warrior3->displayWarrior();
-
+//create 3 weapons
+$weapon1 = new Weapon("épée", 10);
+$weapon2 = new Weapon("hache", 20);
+$weapon3 = new Weapon("arc", 5);
+//display the 3 weapons
+$weapon1->displayWeapon();
+$weapon2->displayWeapon();
+$weapon3->displayWeapon();
 
 
 

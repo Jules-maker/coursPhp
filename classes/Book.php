@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-
+//an implements
 class Book implements BookInterface {
     public function __construct(
         public string $author,

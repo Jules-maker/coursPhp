@@ -1,4 +1,5 @@
 <?
+//this interface 
 declare(strict_types=1);
 interface BookInterface
 {
