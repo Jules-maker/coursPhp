@@ -17,6 +17,9 @@ abstract class User {
     private function getFullName(): string {
         return $this->firstname . " " . $this->lastname;
     }
+    private function setFullName($firstname,$lastname): void {
+       echo $this->firstname . " " . $this->lastname;
+    }
 
     public function getFirstname(): string {
         return $this->firstname;

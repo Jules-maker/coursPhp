@@ -20,6 +20,7 @@
     public function __construct(
         private string $name,
         private int $life,
+        private string $weapon,
         ) {}
     
     public function displayWarrior() {
@@ -29,8 +30,24 @@
 
 }
 
+class Weapon {
+
+    public function __construct(
+        private string $name,
+        private int $damage,
+        ) {}
+    
+    public function displayWeapon() {
+        echo "<p>Nom: " . $this->name . " - Dégâts : " . $this->damage;
+        echo "<br>";
+    }
+
+}
+
+
+
 $warrior1 = new Warrior("John", 100);
-$warrior2 = new Warrior("George", 100);
+$warrior2 = new Warrior("George", 80);
 $warrior3 = new Warrior("Ringo", 100);
 $warrior1->displayWarrior();
 $warrior2->displayWarrior();
