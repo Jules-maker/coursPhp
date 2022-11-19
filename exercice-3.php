@@ -16,6 +16,21 @@ declare(strict_types=1); ?>
 <body>
 
     <?php
+    require_once "classes/WeaponType.php";
+    require_once "classes/WarriorInterface.php";
+    require_once "classes/HealerInterface.php";
+
+
+//TODO: mettre la classe Abstract Warrior autre part
+    abstract class AbstractCharacter
+    {
+        //constructor with name and life
+        public function __construct(
+            private string $name,
+            private int $life,
+        ) {
+        }
+    }
 
 
     class Warrior
@@ -24,7 +39,7 @@ declare(strict_types=1); ?>
         public function __construct(
             private string $name,
             private int $life,
-            private string $weapon,
+            private WeaponType $weapon,
         ) {
         }
 
@@ -33,7 +48,7 @@ declare(strict_types=1); ?>
             echo "<p>Nom: " . $this->name . " - Vie : " . $this->life;
             echo "<br>";
         }
-        public function getWeapon(): string
+        public function getWeapon(): WeaponType
         {
             return $this->weapon;
         }
@@ -53,12 +68,16 @@ declare(strict_types=1); ?>
         }
     }
 
-    class Healer 
+    class Healer implements HealerInterface
     {
         public function __construct(
             private string $name,
             private int $life,
         ) {
+        }
+        public function heal($warrior): void
+        {
+            $warrior->life += 10;
         }
     }
 
@@ -102,9 +121,10 @@ declare(strict_types=1); ?>
     $weapon3->displayWeapon();
 
 
-$healer1 = new Healer("SilverLoooow", 100);
-$healer2= new Healer("Silver", 100);
-$healer3= new Healer("Silver", 100);
+    $healer1 = new Healer("SilverLoooow", 100);
+    $healer2 = new Healer("Silver", 100);
+    $healer3 = new Healer("Silver", 100);
+
 
 
 
